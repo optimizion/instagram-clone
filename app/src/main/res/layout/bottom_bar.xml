@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_search">
+
+    <!-- TODO : 이미지 구현 및 자리 배치 -->
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:id="@+id/btn_search"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:id="@+id/btn_upload"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:id="@+id/btn_follow"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:id="@+id/btn_profile"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_weight="1"/>
+</LinearLayout>

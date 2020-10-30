@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.swfusioncoding.instagramclone.BottomBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/layout_bottom_bar"
+            layout="@layout/bottom_bar"/>
+
+    </com.swfusioncoding.instagramclone.BottomBar>
+
+
+</LinearLayout>
