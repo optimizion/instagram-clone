@@ -1,12 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+ <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SearchActivity"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- 상단 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <!-- TODO : add click event function  -->
+        <LinearLayout
+            android:id="@+id/ll_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/icon_search"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:hint="검색"/>
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/ib_QR"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/icon_qr"/>
+    </LinearLayout>
+
+    <!-- 태그 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp">
+
+            <!-- TODO : add click event function -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@drawable/tag_border">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icon_heart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="IGTV"
+                    android:textStyle="bold"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/tag_border">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icon_heart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="SHOP"
+                    android:textStyle="bold"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="여행"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="건축"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="장식"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="예술"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="음식"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="스타일"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="TV 및 영화"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="DIY"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="음악"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="스포츠"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="미용"
+                android:background="@drawable/tag_border"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 포스트 그리드 뷰 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_border"/>
+    </GridLayout>
+
+    <!-- 하단 바 -->
     <com.swfusioncoding.instagramclone.BottomBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -14,8 +197,5 @@
         <include
             android:id="@+id/layout_bottom_bar"
             layout="@layout/bottom_bar"/>
-
     </com.swfusioncoding.instagramclone.BottomBar>
-
-
 </LinearLayout>
