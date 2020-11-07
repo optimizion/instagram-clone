@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="@layout/activity_search">
+    tools:showIn="@layout/activity_search"
+    android:layout_marginVertical="8dp">
 
     <!-- TODO : 이미지 구현 및 자리 배치 -->
     <ImageButton
@@ -11,7 +12,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginLeft="24dp"
-        android:background="@drawable/icon_home" />
+        android:background="@drawable/icon_add_post" />
     <View
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -20,7 +21,7 @@
         android:id="@+id/btn_search"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:background="@drawable/icon_search" />
+        android:background="@drawable/icon_add_post" />
     <View
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -38,7 +39,7 @@
         android:id="@+id/btn_follow"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:background="@drawable/icon_heart" />
+        android:background="@drawable/icon_add_post" />
     <View
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -48,6 +49,6 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginRight="24dp"
-        android:background="@drawable/icon_profile"
+        android:background="@drawable/icon_add_post"
         />
 </LinearLayout>
