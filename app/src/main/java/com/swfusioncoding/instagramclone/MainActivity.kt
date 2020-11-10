@@ -16,7 +16,7 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
         setContentView(getContentViewId())
 
         navigationView = findViewById(R.id.navigation)
-        navigationView!!.setOnNavigationItemSelectedListener(this)
+        navigationView?.setOnNavigationItemSelectedListener(this)
     }
 
     override fun onStart() {
@@ -50,8 +50,8 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
     }
 
     private fun selectBottomNavigationBarItem(itemId: Int) {
-        val item = navigationView!!.menu.findItem(itemId)
-        item.isChecked = true
+        val item = navigationView?.menu?.findItem(itemId)
+        item?.isChecked = true
     }
 
     abstract fun getContentViewId() : Int
