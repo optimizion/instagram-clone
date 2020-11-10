@@ -1,4 +1,4 @@
-package com.swfusioncoding.instagramclone
+package com.swfusioncoding.instagramclone.Bean
 
 class Post {
     var userName: String? = null

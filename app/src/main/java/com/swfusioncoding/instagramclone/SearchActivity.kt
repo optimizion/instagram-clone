@@ -1,11 +1,13 @@
 package com.swfusioncoding.instagramclone
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.swfusioncoding.instagramclone.Bean.Post
+import com.swfusioncoding.instagramclone.adapter.SearchMainAdapter
+import java.util.*
 
-class SearchActivity : AppCompatActivity() {
+class SearchActivity : MainActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
@@ -13,7 +15,6 @@ class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
-
         val posts: ArrayList<Post> = addData()
 
         viewManager = LinearLayoutManager(this)
@@ -28,6 +29,14 @@ class SearchActivity : AppCompatActivity() {
             // specify an viewAdapter (see also next example)
             adapter = viewAdapter
         }
+    }
+
+    override fun getContentViewId(): Int {
+        return R.layout.activity_search
+    }
+
+    override fun getNavigationMenuItemId(): Int {
+        return R.id.action_search
     }
 
     private fun addData(): ArrayList<Post> {

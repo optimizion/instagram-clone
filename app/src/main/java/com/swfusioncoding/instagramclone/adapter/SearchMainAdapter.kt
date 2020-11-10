@@ -1,10 +1,12 @@
-package com.swfusioncoding.instagramclone
+package com.swfusioncoding.instagramclone.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
+import com.swfusioncoding.instagramclone.Bean.Post
+import com.swfusioncoding.instagramclone.R
 
 class SearchMainAdapter(private val myDataset: ArrayList<Post>) : RecyclerView.Adapter<SearchMainAdapter.SearchMainHolder>() {
 

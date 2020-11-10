@@ -28,7 +28,7 @@
             <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:background="@drawable/icon_search"/>
+                android:background="@drawable/ic_baseline_search_24"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
             android:id="@+id/ib_QR"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/icon_qr"/>
+            android:background="@drawable/ic_baseline_filter_center_focus_24"/>
     </LinearLayout>
 
     <!-- 태그 -->
@@ -72,7 +72,7 @@
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/icon_heart"/>
+                    android:src="@drawable/ic_baseline_live_tv_24"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/icon_heart"/>
+                    android:src="@drawable/ic_baseline_shopping_bag_24"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -197,20 +197,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_search_main"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/hsv_tag"
-        app:layout_constraintBottom_toTopOf="@id/layout_bottom_bar"
-        app:layout_constraintHeight_default="wrap"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constrainedHeight="true"/>
 
-    <!-- 하단 바 -->
-    <com.swfusioncoding.instagramclone.BottomBar
-        android:id="@+id/layout_bottom_bar"
+    <include
+        layout="@layout/item_bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <include
-            android:id="@+id/bottom_bar"
-            layout="@layout/bottom_bar"/>
-    </com.swfusioncoding.instagramclone.BottomBar>
 </androidx.constraintlayout.widget.ConstraintLayout>
