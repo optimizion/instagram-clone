@@ -40,7 +40,7 @@ class SearchMainAdapter(private val myDataset: ArrayList<Post>) : RecyclerView.A
     }
 
     override fun getItemCount(): Int {
-        return myDataset.size
+        return 3
     }
 
 

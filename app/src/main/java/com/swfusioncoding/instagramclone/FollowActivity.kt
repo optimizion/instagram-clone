@@ -7,7 +7,7 @@ import com.swfusioncoding.instagramclone.R
 class FollowActivity : MainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_follow)
+//        setContentView(R.layout.activity_follow)
     }
 
     override fun getContentViewId(): Int {
