@@ -2,7 +2,6 @@ package com.swfusioncoding.instagramclone
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,9 +13,8 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getContentViewId())
-
         navigationView = findViewById(R.id.navigation)
-        navigationView?.setOnNavigationItemSelectedListener(this)
+        navigationView!!.setOnNavigationItemSelectedListener(this)
     }
 
     override fun onStart() {
@@ -31,7 +29,6 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
 
     override fun onNavigationItemSelected(item: MenuItem) : Boolean {
         navigationView!!.postDelayed({
-            Log.e("optimy", "success?")
             when (item.itemId) {
                 R.id.action_home -> startActivity(Intent(this, HomeActivity::class.java))
                 R.id.action_search -> startActivity(Intent(this, SearchActivity::class.java))
@@ -40,7 +37,7 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
                 R.id.action_profile -> startActivity(Intent(this, ProfileActivity::class.java))
             }
             finish()
-        }, 300)
+        }, 150)
         return true
     }
 
@@ -50,8 +47,8 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
     }
 
     private fun selectBottomNavigationBarItem(itemId: Int) {
-        val item = navigationView?.menu?.findItem(itemId)
-        item?.isChecked = true
+        val item = navigationView!!.menu.findItem(itemId)
+        item.isChecked = true
     }
 
     abstract fun getContentViewId() : Int

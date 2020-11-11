@@ -11,8 +11,8 @@ import com.swfusioncoding.instagramclone.adapter.InstargramAdapter
 class HomeActivity : MainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
+//        setContentView(R.layout.activity_home)
 
         var image = findViewById<ImageView>(R.id.pica)
         Glide.with(this).load(R.drawable.pica).circleCrop().into(image);

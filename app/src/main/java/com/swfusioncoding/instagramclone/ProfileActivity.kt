@@ -7,7 +7,7 @@ import com.swfusioncoding.instagramclone.R
 class ProfileActivity : MainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+//        setContentView(R.layout.activity_profile)
     }
 
     override fun getContentViewId(): Int {
