@@ -14,7 +14,7 @@
         //상단 바
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:background="#FFFFFF"
             android:layout_marginBottom="3dp"
