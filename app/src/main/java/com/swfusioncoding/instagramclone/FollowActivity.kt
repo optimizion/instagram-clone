@@ -16,8 +16,17 @@ class FollowActivity : MainActivity() {
 //들어갈 데이터를 만드는 코드
         var list = ArrayList<FollowBean>()
         var bean1 = FollowBean()
-        bean1.userID = 
+        bean1.userID = "hello"
+        bean1.userName = "hi"
+        bean1.userImg = R.drawable.ic_baseline_add_box_24
 
+        var bean2 = FollowBean()
+        bean2.userID = "hello"
+        bean2.userName = "hi"
+        bean2.userImg = R.drawable.ic_baseline_add_box_24
+
+        list.add(bean1)
+        list.add(bean2)
 
 //리싸이클러뷰 구현코드
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView_follow)
@@ -27,6 +36,8 @@ class FollowActivity : MainActivity() {
         recyclerView.adapter = adapter
 
     }
+
+
 
     override fun getContentViewId(): Int {
         return R.layout.activity_follow
