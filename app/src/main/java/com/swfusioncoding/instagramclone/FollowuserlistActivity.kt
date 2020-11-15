@@ -4,18 +4,23 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.LinearLayout
+import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swfusioncoding.instagramclone.Bean.FollowBean
-import com.swfusioncoding.instagramclone.R
 import com.swfusioncoding.instagramclone.adapter.FollowAdapter
 
-class FollowActivity : MainActivity() {
+class FollowuserlistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_follow)
-        
+        //setContentView(R.layout.activity_followuserlist)
+        var followBack = findViewById<ImageButton>(R.id.followBack_btn)
+
+        followBack.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,FollowActivity::class.java)
+            startActivity(intent)
+        })
+
 //들어갈 데이터를 만드는 코드
         var list = ArrayList<FollowBean>()
         var bean1 = FollowBean()
@@ -121,30 +126,13 @@ class FollowActivity : MainActivity() {
         list.add(bean19)
         list.add(bean20)
 
-//리싸이클러뷰 구현코드
+        //리싸이클러뷰 구현코드
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView_follow)
         var layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = layoutManager
         var adapter = FollowAdapter(list)
         recyclerView.adapter = adapter
 
-
-//사용자 추천 클릭시
-        var userList = findViewById<LinearLayout>(R.id.useList_linear)
-
-        userList.setOnClickListener(View.OnClickListener {
-            var intent = Intent(this,FollowuserlistActivity::class.java)
-            startActivity(intent)
-        })
     }
 
-
-
-    override fun getContentViewId(): Int {
-        return R.layout.activity_follow
-    }
-
-    override fun getNavigationMenuItemId(): Int {
-        return R.id.action_follow
-    }
 }

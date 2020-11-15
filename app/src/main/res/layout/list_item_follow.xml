@@ -10,7 +10,9 @@
         android:id="@+id/userImg_img"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_baseline_supervised_user_circle_24"/>
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        />
 
     //텍스트 유저정보 레이아웃
     <LinearLayout
@@ -70,6 +72,7 @@
         android:gravity="right">
 
         <Button
+            android:id="@+id/follow_btn"
             android:background="#0080FF"
             android:layout_width="53dp"
             android:layout_height="25dp"
@@ -79,6 +82,7 @@
             android:textColor="#FFFFFF"/>
 
         <ImageButton
+            android:id="@+id/delete_btn"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:src="@drawable/ic_baseline_close_24"

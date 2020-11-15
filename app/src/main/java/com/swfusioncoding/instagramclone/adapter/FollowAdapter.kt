@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,6 +21,13 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
         holder.userID?.setText(bean.userID)
         holder.userName?.setText(bean.userName)
         holder.userImg?.setBackgroundResource(bean!!.userImg!!)
+//        var followCheck = false
+//        holder.follow_btn?.setOnClickListener {
+//            if(!followCheck){
+//                followCheck = true
+//                holder.follow_btn.setTextColor("#000000")
+//            }
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowHolder {
@@ -28,7 +36,7 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
     }
 
     override fun getItemCount(): Int {
-        return 2
+        return 20
     }
 
     class FollowHolder(var view: View) : RecyclerView.ViewHolder(view){
@@ -36,10 +44,15 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
         public var userID : TextView? = null
         public var userName:TextView?=null
         public var userImg : ImageView? = null
+
+        public var follow_btn: Button?=null
+
         init {
             userID = view.findViewById(R.id.userID_txt)
             userName  =view.findViewById(R.id.userName_txt)
             userImg = view.findViewById(R.id.userImg_img)
+
+            follow_btn = view.findViewById(R.id.follow_btn)
 
         }
     }
