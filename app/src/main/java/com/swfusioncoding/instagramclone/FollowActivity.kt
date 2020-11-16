@@ -133,7 +133,7 @@ class FollowActivity : MainActivity() {
         var userList = findViewById<LinearLayout>(R.id.useList_linear)
 
         userList.setOnClickListener(View.OnClickListener {
-            var intent = Intent(this,FollowuserlistActivity::class.java)
+            var intent = Intent(this,SearchActivity::class.java)
             startActivity(intent)
         })
     }
