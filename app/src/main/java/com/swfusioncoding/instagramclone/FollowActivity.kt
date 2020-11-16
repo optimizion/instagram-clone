@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.swfusioncoding.instagramclone.Bean.FollowBean
 import com.swfusioncoding.instagramclone.R
 import com.swfusioncoding.instagramclone.adapter.FollowAdapter
+import kotlinx.android.synthetic.main.activity_followuserlist.*
 
 class FollowActivity : MainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -133,7 +134,7 @@ class FollowActivity : MainActivity() {
         var userList = findViewById<LinearLayout>(R.id.useList_linear)
 
         userList.setOnClickListener(View.OnClickListener {
-            var intent = Intent(this,SearchActivity::class.java)
+           var intent = Intent(this, FollowuserlistActivity::class.java)
             startActivity(intent)
         })
     }
