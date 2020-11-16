@@ -1,18 +1,22 @@
 package com.swfusioncoding.instagramclone.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instargram_test.been.InstagramBean
 import com.swfusioncoding.instagramclone.Bean.FollowBean
+import com.swfusioncoding.instagramclone.ProfileActivity
 import com.swfusioncoding.instagramclone.R
+import com.swfusioncoding.instagramclone.SearchActivity
 import de.hdodenhof.circleimageview.CircleImageView
+import kotlinx.android.synthetic.main.list_item_follow.view.*
 
 class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter<FollowAdapter.FollowHolder>()  {
 
@@ -21,13 +25,14 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
         holder.userID?.setText(bean.userID)
         holder.userName?.setText(bean.userName)
         holder.userImg?.setBackgroundResource(bean!!.userImg!!)
-//        var followCheck = false
-//        holder.follow_btn?.setOnClickListener {
-//            if(!followCheck){
-//                followCheck = true
-//                holder.follow_btn.setTextColor("#000000")
-//            }
-//        }
+
+        //리싸이클러뷰 아이템을 클릭했을 때
+        holder.bindItem(listData[position])
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView?.context, ProfileActivity::class.java )
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowHolder {
@@ -47,6 +52,28 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
 
         public var follow_btn: Button?=null
 
+        //바인드 메서드 구현
+        fun bindItem(data:FollowBean){
+            var followCheck = false
+            //라싸이클러뷰 아이템안에 있는 버튼을 클릭했을 때
+            follow_btn?.setOnClickListener {
+                Toast.makeText(itemView.context, "팔로우 버튼을 클릭했습니다.", Toast.LENGTH_LONG).show()
+                if(!followCheck){
+                    follow_btn?.setBackgroundColor(Color.WHITE)
+                    follow_btn?.setTextColor(Color.BLACK)
+                    followCheck=true
+                }
+                else{
+                    follow_btn?.setBackgroundColor(Color.parseColor("#0080FF"))
+                    follow_btn?.setTextColor(Color.WHITE)
+                }
+
+            }
+            //리싸이클러뷰 아이템을 클릭했을 때
+            /*itemView.setOnClickListener({
+                Toast.makeText(itemView.context, "아이템을 클릭했습니다.", Toast.LENGTH_LONG).show()
+            })*/
+        }
         init {
             userID = view.findViewById(R.id.userID_txt)
             userName  =view.findViewById(R.id.userName_txt)
