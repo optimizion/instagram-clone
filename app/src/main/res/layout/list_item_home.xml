@@ -8,6 +8,8 @@
             android:layout_width="wrap_content"
             android:layout_height="52dp"
             android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_vertical">
 
             <ImageView
@@ -35,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_more"
-                android:layout_marginRight="16dp"
+
                 />
         </LinearLayout>
 
@@ -49,12 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_height="52dp"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
 
             <ImageView
                 android:id="@+id/likeicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/ic_like"
                 android:layout_marginLeft="16dp"/>
 
@@ -87,8 +91,85 @@
             android:layout_marginTop="9dp"
             android:layout_marginLeft="16dp"
             android:textSize="14sp"
+            android:textStyle="bold"
             android:textColor="#333333"
             />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginLeft="16dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="14sp"
+               android:text="너무 귀엽잖아~~"
+               android:textColor="#000000"
+               />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="댓글 16개 모두 보기"
+            android:textColor="#808080"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:id="@+id/name_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="kate__ohh"
+            android:layout_marginRight="5dp"
+            android:textColor="#0067a3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="진짜 귀엽당"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            />
+
+    </LinearLayout>
 
 
 </LinearLayout>
