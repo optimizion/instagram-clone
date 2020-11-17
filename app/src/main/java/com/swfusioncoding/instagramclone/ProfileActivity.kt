@@ -15,11 +15,11 @@ import com.swfusioncoding.instagramclone.R
 import kotlinx.android.synthetic.main.activity_profile.*
 
 // 프로필 탭 메인화면
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : MainActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+//        setContentView(R.layout.activity_profile)
 
         init()
 //        tabLayout.tabIconTint = resources.getColorStateList(R.color.tab_icon, null)
@@ -66,5 +66,13 @@ class ProfileActivity : AppCompatActivity() {
                 else -> MyFragment2()
             }
         }
+    }
+
+    override fun getContentViewId(): Int {
+        return R.layout.activity_profile
+    }
+
+    override fun getNavigationMenuItemId(): Int {
+        return R.id.action_profile
     }
 }

@@ -22,6 +22,7 @@
         <activity android:name=".UploadActivity" />
         <activity android:name=".FollowActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".EditProfileActivity" />
     </application>
 
 </manifest>

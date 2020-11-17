@@ -37,7 +37,7 @@ abstract class MainActivity : AppCompatActivity(), BottomNavigationView.OnNaviga
                 R.id.action_profile -> startActivity(Intent(this, ProfileActivity::class.java))
             }
             finish()
-        }, 150)
+        }, 100)
         return true
     }
 
