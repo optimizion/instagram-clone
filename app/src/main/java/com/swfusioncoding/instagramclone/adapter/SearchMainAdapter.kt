@@ -12,26 +12,24 @@ class SearchMainAdapter(private val myDataset: ArrayList<Post>) : RecyclerView.A
 
 
     override fun onBindViewHolder(holder: SearchMainHolder, position: Int) {
-        var post = myDataset[position]
-
-        holder.imgBtn1?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn2?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn3?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn4?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn5?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn6?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn7?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn8?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn9?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn10?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn11?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn12?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn13?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn14?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn15?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn16?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn17?.setBackgroundResource(post!!.mainImg!!)
-        holder.imgBtn18?.setBackgroundResource(post!!.mainImg!!)
+        holder.imgBtn1?.setBackgroundResource(myDataset[0]!!.mainImg!!)
+        holder.imgBtn2?.setBackgroundResource(myDataset[1]!!.mainImg!!)
+        holder.imgBtn3?.setBackgroundResource(myDataset[2]!!.mainImg!!)
+        holder.imgBtn4?.setBackgroundResource(myDataset[3]!!.mainImg!!)
+        holder.imgBtn5?.setBackgroundResource(myDataset[4]!!.mainImg!!)
+        holder.imgBtn6?.setBackgroundResource(myDataset[5]!!.mainImg!!)
+        holder.imgBtn7?.setBackgroundResource(myDataset[6]!!.mainImg!!)
+        holder.imgBtn8?.setBackgroundResource(myDataset[7]!!.mainImg!!)
+        holder.imgBtn9?.setBackgroundResource(myDataset[8]!!.mainImg!!)
+        holder.imgBtn10?.setBackgroundResource(myDataset[9]!!.mainImg!!)
+        holder.imgBtn11?.setBackgroundResource(myDataset[10]!!.mainImg!!)
+        holder.imgBtn12?.setBackgroundResource(myDataset[11]!!.mainImg!!)
+        holder.imgBtn13?.setBackgroundResource(myDataset[12]!!.mainImg!!)
+        holder.imgBtn14?.setBackgroundResource(myDataset[13]!!.mainImg!!)
+        holder.imgBtn15?.setBackgroundResource(myDataset[14]!!.mainImg!!)
+        holder.imgBtn16?.setBackgroundResource(myDataset[15]!!.mainImg!!)
+        holder.imgBtn17?.setBackgroundResource(myDataset[16]!!.mainImg!!)
+        holder.imgBtn18?.setBackgroundResource(myDataset[17]!!.mainImg!!)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchMainHolder {
