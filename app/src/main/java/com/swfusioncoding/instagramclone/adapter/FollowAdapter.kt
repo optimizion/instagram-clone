@@ -46,7 +46,7 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
     }
 
     override fun getItemCount(): Int {
-        return 20
+        return listData.size
     }
 
     class FollowHolder(var view: View) : RecyclerView.ViewHolder(view){
@@ -72,6 +72,7 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
                 else{
                     follow_btn?.setBackgroundColor(Color.parseColor("#0080FF"))
                     follow_btn?.setTextColor(Color.WHITE)
+                    followCheck=false
                 }
 
             }
