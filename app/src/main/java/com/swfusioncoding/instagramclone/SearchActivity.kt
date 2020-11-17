@@ -1,10 +1,16 @@
 package com.swfusioncoding.instagramclone
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.inputmethod.InputMethodManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swfusioncoding.instagramclone.Bean.Post
 import com.swfusioncoding.instagramclone.adapter.SearchMainAdapter
+import kotlinx.android.synthetic.main.activity_search.*
+import kotlinx.android.synthetic.main.activity_search.ll_top_bar
+import kotlinx.android.synthetic.main.activity_search_main.*
 import java.util.*
 
 class SearchActivity : MainActivity() {
@@ -25,6 +31,12 @@ class SearchActivity : MainActivity() {
             layoutManager = viewManager
             adapter = viewAdapter
         }
+
+        ll_top_bar.setOnClickListener {
+            val intent = Intent(this, SearchMainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun getContentViewId(): Int {
