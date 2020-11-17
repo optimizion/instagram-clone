@@ -6,6 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".UploadActivity">
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".UploadActivity">
+        //상단 바
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/uploadBack_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_close_24"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Post"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:textColor="#000000"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_bluebaseline_arrow_back_24"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                android:layout_marginLeft="210dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profileimage_sample_2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="갤러리"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:textColor="#000000"
+                android:paddingLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/hsv_tag"
+                app:layout_constraintBottom_toTopOf="@id/navigation"
+                app:layout_constrainedHeight="true"/>
+
+        </LinearLayout>
+    </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

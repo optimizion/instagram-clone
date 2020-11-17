@@ -33,6 +33,11 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
 
+        holder.delete_btn?.setOnClickListener {
+            listData.removeAt(position)
+            notifyDataSetChanged()
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowHolder {
@@ -51,6 +56,7 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
         public var userImg : ImageView? = null
 
         public var follow_btn: Button?=null
+        public var delete_btn:ImageButton? = null
 
         //바인드 메서드 구현
         fun bindItem(data:FollowBean){
@@ -80,7 +86,7 @@ class FollowAdapter (var listData:ArrayList<FollowBean>)  : RecyclerView.Adapter
             userImg = view.findViewById(R.id.userImg_img)
 
             follow_btn = view.findViewById(R.id.follow_btn)
-
+            delete_btn = view.findViewById(R.id.delete_btn)
         }
     }
 }
