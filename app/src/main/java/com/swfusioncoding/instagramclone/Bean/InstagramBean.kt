@@ -5,5 +5,7 @@ class InstagramBean {
     public var userName : String? = null
     public var photoImg : Int? = null
     public var like : String? = null
+    public var name : String? = null
+    public var name_plus : String? = null
 
 }

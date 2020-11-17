@@ -31,6 +31,8 @@ class InstargramAdapter (list:ArrayList<InstagramBean>)  : RecyclerView.Adapter<
         holder.userName.setText(item!!.userName!!)
         holder.photoImg.setBackgroundResource(item!!.photoImg!!)
         holder.like.setText(item!!.like!!)
+        holder.name.setText(item!!.name!!)
+        holder.name_plus.setText(item!!.name_plus!!)
 
         holder.likeicon?.setOnClickListener({
             if(count == 0) {
@@ -65,6 +67,8 @@ class InstargramAdapter (list:ArrayList<InstagramBean>)  : RecyclerView.Adapter<
         public var userName:TextView
         public var photoImg:ImageView
         public var like:TextView
+        public var name:TextView
+        public var name_plus:TextView
 
         init{
             mView = itemView
@@ -74,6 +78,8 @@ class InstargramAdapter (list:ArrayList<InstagramBean>)  : RecyclerView.Adapter<
             userName = mView.findViewById(R.id.userName)
             photoImg = mView.findViewById(R.id.photoImg)
             like = mView.findViewById(R.id.like)
+            name = mView.findViewById(R.id.name)
+            name_plus = mView.findViewById(R.id.name_plus)
 
 
         }
